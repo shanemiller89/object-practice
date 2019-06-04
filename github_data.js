@@ -4407,4 +4407,8 @@ const githubData = [
     }
   ]
 
-console.log(githubData.id)
+githubData.forEach( function (gitEvent) {
+  if (gitEvent.id === "8030403992") {
+    console.log(gitEvent.payload.commits[0].message)
+  }
+});
